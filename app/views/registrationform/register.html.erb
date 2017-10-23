@@ -1,0 +1,38 @@
+<h1><center>Registration form </center></h1>
+
+<%= form_tag do -%>
+<pre> Firstname 	 :  <%= text_field_tag 'FN', nil, placeholder: 'your first name', maxlength:15 -%> </pre>
+<pre> Lastname  	 :  <%= text_field_tag 'LN', nil, placeholder: 'your last  name', maxlength:15 -%> </pre>
+<pre> Age		 :  <%= number_field_tag 'age', nil, in:14..110 -%> </pre>
+<pre> Gender		 :  <%=radio_button_tag 'gender', 'male' -%> male </pre>
+<pre>		    <%=radio_button_tag 'gender', 'female' -%> female </pre>
+<pre> Email		: <%= email_field_tag 'email' -%> </pre>
+<pre> Phone		: <%= telephone_field_tag 'phone' -%> </pre>
+<pre> Address 	: <%= text_area_tag 'Address', nil, size: "50*3" -%> </pre>
+
+<pre> 			 <%= submit_tag 'Submit' -%></pre>
+<% end-%>
+
+<body>
+<div align="center" style="color:green">
+ Check your details and print
+ <br/>
+ 	Firstname is <%= @Fn -%>
+ <br/>
+ 	Lastname is <%= @Ln 	-%>
+ <br/>
+ 	Age is <%= @age -%>
+ <br/>
+ 	You are <%= @gender -%>
+ <br/>
+ 	your mailid is <%= @email -%>
+ <br/>
+ 	phone number is <%= @ph -%>
+ <br/>
+ 	Address is <%= @add -%>
+ </div>
+ </body>
+
+
+
+
